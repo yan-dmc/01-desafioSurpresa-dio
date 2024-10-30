@@ -15,9 +15,10 @@
 }
 
 body {
+    display: flex;
     background: url(./Imagens/background.png) no-repeat;
     background-size: cover;
-    display: flex;
+    
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -208,4 +209,18 @@ button:hover {
     .popUp-box {
         font-size: 3.3vh;
     }
+}
+
+.footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    color: hsl(0, 0%, 50%);
+    justify-content: center;
+    width: 30vh;
+    height: 3.5vh;
+    font-size: 2vh;
+    background-color: #000000;
+    border-radius: 0vh 0vh 0vh 20vh;
 }
