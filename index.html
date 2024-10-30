@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Pokémon</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="icon" type="image/pkm-icon" href="./imagens/icon-pkm.png">
+</head>
+<body>
+    <section class="popUp hidden">
+        <div class="popUp-box">
+            <p class="popUp-content"></p>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="joy">
+            <img src="./Imagens/joy.png" alt="joy">
+        </div>
+        <button class="voltar-btn" onclick="menu()"><</button>
+        <div class="box">
+            <div class="menu "> 
+                <!-- TIRAR HIDDEN -->
+                <button class="cadastrar" onclick="cadastrar()">Cadastrar novo Pokémon</button>
+                <br>
+                <button class="visualizar" onclick="visualizar()">Visualizar Pokémons cadastrados</button>
+                <br>
+                <button class="deletar" onclick="deletar()">Deletar último Pokémon cadastrado</button>
+            </div>
+
+            <div class="cadastro hidden">
+                <!-- TIRAR HIDDEN -->
+                <form id="meuFormulario" class="form">
+                    <label for="nome">Nome do Pokémon:</label><br>
+                    <input type="text" name="nome" id="nome" placeholder="charmander" style="width: 84%;"
+                    maxlength="15" pattern="[A-Za-zÀ-ÿ\s]+" required>
+                    <br>
+                    <label for="nome">Espécie do Pokémon:</label><br>
+                    <input type="text" name="nome" id="especie" placeholder="charmander" style="width: 84%;"
+                    maxlength="15" pattern="[A-Za-zÀ-ÿ\s]+" required>
+                    <br>
+                    <label for="level">Level do Pokémon:</label><br>
+                    <input type="number" name="level" id="level" placeholder="5" style="width: 84%;"
+                    min="0" max="100" required>
+                    <br>
+                    <div class="sexo-form">
+                        <label for="" class="label-sexo">Sexo do Pokémon:</label>
+                        <label for="sexoM"><img src="./Imagens/maleSymbol.png" width="8px"></label>
+                        <input type="radio" name="sexo" id="sexoM" placeholder="masculino" value="Masculino">
+                        <label for="sexoF"><img src="./Imagens/femaleSymbol.png" width="8px"></label>
+                        <input type="radio" name="sexo" id="sexoF" placeholder="feminino" value="Feminino">
+                        <label for="shiny"><img src="./Imagens/shiny.png" width="13px"></label>
+                        <input type="checkbox" name="shiny" id="shiny" placeholder="shiny" value="Shiny">
+                    </div>
+                    <br>
+                    <label for="hp">HP do Pokémon:</label><br>
+                    <input type="text" name="HP" id="HP" placeholder="13/13" style="width: 84%;" value="0/0"
+                    maxlength="7" pattern="^[0-9]{1,3}/[0-9]{1,3}$" required>
+                    <br>
+                    <button class="cadastroFIM" onclick="salvarDados(event)">Cadastrar</button>
+                    
+                </form>
+            </div>
+
+            <div class="visualizo hidden">
+                <li class="listaPkm">
+                    <ul>
+                        <strong>Nome:</strong> teste<br>
+                        <strong>Espécie:</strong> <br>
+                        <strong>Level:</strong> <br>
+                        <strong>Sexo:</strong><br>
+                        <strong>Shiny:</strong> <br>
+                        <strong>HP:</strong> <br>
+                    </ul>
+                </li>
+            </div>
+
+        </div>
+    </section>
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+</html>
